@@ -37,9 +37,19 @@ public class RecipeUI {
                 switch (choice) {
                     case "1":
                         // 設問1: 一覧表示機能
+                        fileHandler.readRecipes();
                         break;
                     case "2":
                         // 設問2: 新規登録機能
+                        // レシピの入力をしてもらう
+                        System.out.print("Enter recipe name: ");
+                        String recipeName = reader.readLine();
+
+                        // 材料の入力をしてもらう
+                        System.out.print("Enter main ingredients (comma separated): ");
+                        String ingredients = reader.readLine();
+                        fileHandler.addRecipe(recipeName, ingredients);
+                        System.out.println("Recipe added successfully.");
                         break;
                     case "3":
                         // 設問3: 検索機能
