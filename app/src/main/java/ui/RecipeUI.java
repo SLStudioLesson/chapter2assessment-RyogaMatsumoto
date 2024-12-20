@@ -44,11 +44,12 @@ public class RecipeUI {
                         // レシピの入力をしてもらう
                         System.out.print("Enter recipe name: ");
                         String recipeName = reader.readLine();
-
                         // 材料の入力をしてもらう
                         System.out.print("Enter main ingredients (comma separated): ");
                         String ingredients = reader.readLine();
+
                         fileHandler.addRecipe(recipeName, ingredients);
+
                         System.out.println("Recipe added successfully.");
                         break;
                     case "3":
